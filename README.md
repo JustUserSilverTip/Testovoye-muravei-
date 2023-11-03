@@ -1,5 +1,6 @@
-# Testovoye-muravei-
-`from PIL import Image
+# Testovoye-muravei
+
+from PIL import Image
 import numpy as np
 
 def ant_path(width, height):
@@ -30,10 +31,10 @@ def ant_path(width, height):
     image.putdata([pixel for row in pixels for pixel in row])
     image.save("ant_path.png")
     return image
-
+    
 # Вызываем функцию с указанными размерами поля
 image = ant_path(1024, 1024)
 
 # Подсчитываем число черных клеток на изображении
 black_pixels = sum(1 for pixel in image.getdata() if pixel == 0)
-print(f"Число черных клеток на изображении: {black_pixels}")`
+print(f"Число черных клеток на изображении: {black_pixels}")
