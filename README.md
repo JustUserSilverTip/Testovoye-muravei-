@@ -1,5 +1,6 @@
 # Testovoye-muravei
 
++Решение #1
 ```
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
