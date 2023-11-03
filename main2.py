@@ -1,11 +1,10 @@
 from memory_profiler import profile
-
 from func import (create_blank_image, move_ant, update_direction_and_pixel)
-    
+
 @profile
 def ant_path(width, height):
     image = create_blank_image(width, height)
-    pixels = [[1 for _ in range(width)] for _ in range(height)]
+    pixels = image.load()
     x, y = width // 2, height // 2  # Начальные координаты муравья
     direction = 0  # Начальное направление (0 - вверх, 1 - вправо, 2 - вниз, 3 - влево)
 
@@ -13,9 +12,6 @@ def ant_path(width, height):
         direction = update_direction_and_pixel(x, y, direction, pixels)
         x, y = move_ant(x, y, direction)
 
-    for y in range(height):
-        for x in range(width):
-            image.putpixel((x, y), pixels[y][x])
     image.save("ant_path.png")
     return image
 
