@@ -1,7 +1,29 @@
 from memory_profiler import profile
+from PIL import Image
 
-from func import (create_blank_image, move_ant, update_direction_and_pixel)
-    
+def create_blank_image(width, height):
+    return Image.new("1", (width, height), color=1)
+
+def move_ant(x, y, direction):
+    if direction == 0:  # Вверх
+        y -= 1
+    elif direction == 1:  # Вправо
+        x += 1
+    elif direction == 2:  # Вниз
+        y += 1
+    elif direction == 3:  # Влево
+        x -= 1
+    return x, y
+
+def update_direction_and_pixel(x, y, direction, pixels):
+    if pixels[y][x] == 1:  # Если клетка белая
+        direction = (direction + 1) % 4  # Поворачиваем на 90° по часовой стрелке
+        pixels[y][x] = 0  # Инвертируем пиксель (черный)
+    else:  # Если клетка черная
+        direction = (direction - 1) % 4  # Поворачиваем на 90° против часовой стрелки
+        pixels[y][x] = 1  # Инвертируем пиксель (белый)
+    return direction
+
 @profile
 def ant_path(width, height):
     image = create_blank_image(width, height)
