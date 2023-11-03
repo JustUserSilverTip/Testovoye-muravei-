@@ -39,3 +39,21 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 ```
 Число черных клеток на изображении: 3683
 ![Screenshot](ant_path.png)
+Инструкция для запуска:
+
+1) Клонирование репозитория
+```
+git clone https://github.com/JustUserSilverTip/Testovoye-muravei-.git
+```
+2) Установка зависимостей
+```
+pip install -r requirements.txt
+```
+3) Запуск варианта с list comprehension:
+```
+python main.py
+```
+4) Запуск варианта с объектом изображения PIL:
+```
+python main2.py
+```
