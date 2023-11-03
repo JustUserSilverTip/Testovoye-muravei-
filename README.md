@@ -35,7 +35,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
     32     34.5 MiB     -7.0 MiB           1       image.save("ant_path.png")
     33     34.5 MiB      0.0 MiB           1       return image
 ```
-Решение #2 (используем библиотеку PIL)
+Решение #2 (используем объект изображения PIL)
 ```
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
