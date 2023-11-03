@@ -1,4 +1,6 @@
 # Testovoye-muravei
+
+```
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
      4     23.2 MiB     23.2 MiB           1   @profile
@@ -31,4 +33,5 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
     31     41.5 MiB  -1602.5 MiB     1049603       image.putdata([pixel for row in pixels for pixel in row])
     32     34.5 MiB     -7.0 MiB           1       image.save("ant_path.png")
     33     34.5 MiB      0.0 MiB           1       return image
+```
 ![Screenshot](ant_path.png)
